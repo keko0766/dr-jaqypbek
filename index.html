@@ -1,0 +1,805 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dr.Jaqypbek 24/7 — стоматология в Шымкенте</title>
+<meta name="description" content="Стоматология для всей семьи в Шымкенте: терапия, ортодонтия, ортопедия, хирургия. Круглосуточно по предварительному звонку. Рейтинг 4,9 в 2ГИС.">
+<link rel="icon" href="assets/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+
+<!--
+  DR.JAQYPBEK 24/7, Шымкент. Сайт собран из шаблона лендинга.
+  Данные взяты из карточки 2ГИС (адрес, телефон, график, рейтинг, лицензия, врачи, услуги).
+  Цен в прайсе 2ГИС нет, фото и текстов отзывов в источнике не было. См. README.md.
+-->
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Dentist","name":"Dr.Jaqypbek 24/7","telephone":"+77054548040",
+ "address":{"@type":"PostalAddress","streetAddress":"мкр. Нурсат 2, 29/4 к5","addressLocality":"Шымкент","postalCode":"160023","addressCountry":"KZ"},
+ "aggregateRating":{"@type":"AggregateRating","ratingValue":"4.9","ratingCount":"437"},
+ "sameAs":["https://www.instagram.com/dr_jaqypbek","https://www.tiktok.com/@dr_jaqypbek","https://2gis.kz/shymkent/firm/70000001079911508"]}
+</script>
+
+<style>
+:root {
+  --enamel: #F3F6F7;
+  --paper: #FFFFFF;
+  --ink: #0F2A3A;
+  --ink-2: #4A6272;
+  --mist: #DCE8EC;
+  --aqua: #157A8A;
+  --coral: #D8452D;
+  --coral-d: #B8361F;
+
+  --font-head: "Oswald", system-ui, sans-serif;
+  --font-body: "Onest", system-ui, sans-serif;
+
+  --gutter: clamp(16px, 4vw, 40px);
+  --maxw: 1160px;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+body {
+  margin: 0;
+  background: var(--enamel);
+  color: var(--ink);
+  font: 400 1rem/1.6 var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+img, svg { display: block; max-width: 100%; }
+a { color: inherit; }
+h1, h2, h3 { font-family: var(--font-head); font-weight: 500; line-height: 1.12; letter-spacing: 0.005em; margin: 0; }
+p { margin: 0; }
+:focus-visible { outline: 3px solid var(--aqua); outline-offset: 3px; border-radius: 6px; }
+
+.wrap { max-width: var(--maxw); margin: 0 auto; padding-inline: var(--gutter); }
+.section { padding-block: clamp(56px, 8vw, 104px); }
+.section--tint { background: var(--mist); }
+.section--paper { background: var(--paper); }
+.section-head { display: grid; gap: 12px; max-width: 640px; margin-bottom: clamp(28px, 4vw, 48px); }
+.section-head h2 { font-size: clamp(1.9rem, 3.8vw, 2.75rem); }
+.section-head p { color: var(--ink-2); }
+
+/* Buttons */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  min-height: 48px; padding: 0 26px;
+  border: 0; border-radius: 999px;
+  font: 600 1rem var(--font-body); text-decoration: none; cursor: pointer;
+  transition: background-color .15s ease, transform .15s ease;
+}
+.btn:active { transform: translateY(1px); }
+.btn--primary { background: var(--coral); color: #fff; }
+.btn--primary:hover { background: var(--coral-d); }
+.btn--ghost { background: transparent; color: var(--ink); box-shadow: inset 0 0 0 2px var(--ink); }
+.btn--ghost:hover { background: var(--ink); color: #fff; }
+.btn--block { width: 100%; }
+
+/* Header */
+.site-header { position: sticky; top: 0; z-index: 20; background: rgba(243,246,247,.94); backdrop-filter: blur(8px); border-bottom: 1px solid var(--mist); }
+.site-header .wrap { display: flex; align-items: center; gap: 24px; min-height: 68px; }
+.logo { display: flex; align-items: center; gap: 10px; text-decoration: none; font: 500 1.3rem var(--font-head); letter-spacing: 0.005em; margin-right: auto; }
+.logo { white-space: nowrap; }
+.logo img { width: 40px; height: 40px; flex: none; border-radius: 50%; }
+@media (max-width: 480px) { .logo { font-size: .9rem; white-space: nowrap; } .site-header .wrap { gap: 12px; } }
+.nav { display: none; gap: 22px; font-size: .95rem; }
+.nav a { text-decoration: none; color: var(--ink-2); }
+.nav a:hover { color: var(--ink); }
+.lang { display: flex; padding: 3px; border-radius: 999px; box-shadow: inset 0 0 0 1.5px var(--mist); background: var(--paper); }
+.lang button { min-width: 44px; min-height: 34px; padding: 0 10px; border: 0; border-radius: 999px; background: none; color: var(--ink-2); font: 600 .85rem var(--font-body); cursor: pointer; }
+.lang button[aria-pressed="true"] { background: var(--ink); color: #fff; }
+@media (max-width: 560px) { .site-header > .wrap > .btn { display: none; } }
+.header-phone { display: none; text-decoration: none; font-weight: 600; white-space: nowrap; }
+.header-phone small { display: block; font-weight: 400; font-size: .75rem; color: var(--ink-2); }
+.site-header .btn { min-height: 42px; padding-inline: 20px; font-size: .95rem; }
+@media (min-width: 900px) {
+  .nav { display: flex; }
+  .header-phone { display: block; }
+}
+
+/* Hero */
+.hero { padding-block: clamp(36px, 6vw, 80px) clamp(40px, 6vw, 72px); }
+.hero-grid { display: grid; gap: 40px; align-items: center; }
+@media (min-width: 960px) { .hero-grid { grid-template-columns: 1.15fr .85fr; gap: 64px; } }
+.hero h1 { font-size: clamp(2.4rem, 5.6vw, 4rem); }
+.hero-lead { margin-top: 20px; font-size: 1.125rem; color: var(--ink-2); max-width: 46ch; }
+.hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+.hero-proof { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 20px; margin-top: 28px; font-size: .95rem; color: var(--ink-2); }
+.stars { display: inline-flex; gap: 2px; color: #E8A317; }
+.stars svg { width: 18px; height: 18px; }
+.hero-proof strong { color: var(--ink); }
+.hero-proof a { text-decoration: underline; text-underline-offset: 3px; }
+.hero-proof a:hover { color: var(--ink); }
+
+/* Quiz */
+.quiz { background: var(--paper); border: 1px solid var(--mist); border-radius: 24px; padding: clamp(20px, 3vw, 32px); }
+.quiz-top { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 16px; font-size: .875rem; color: var(--ink-2); }
+.quiz-bar { display: flex; gap: 6px; flex: 1; max-width: 140px; }
+.quiz-bar i { flex: 1; height: 4px; border-radius: 4px; background: var(--mist); }
+.quiz-bar i.on { background: var(--aqua); }
+.quiz h2 { font-size: 1.2rem; margin-bottom: 8px; }
+.quiz-note { font-size: .9rem; color: var(--ink-2); margin-bottom: 18px; }
+.quiz-step[hidden] { display: none; }
+.opts { display: grid; gap: 10px; grid-template-columns: 1fr 1fr; }
+.opt {
+  min-height: 56px; padding: 10px 14px; text-align: left;
+  border: 1.5px solid var(--mist); border-radius: 12px; background: var(--enamel);
+  font: 500 .95rem/1.3 var(--font-body); color: var(--ink); cursor: pointer;
+  transition: border-color .15s ease, background-color .15s ease;
+}
+.opt:hover { border-color: var(--aqua); background: #fff; }
+.opt[aria-pressed="true"] { border-color: var(--aqua); background: #E4F2F4; }
+.estimate { display: grid; gap: 2px; margin-bottom: 16px; padding: 14px 16px; border-radius: 12px; background: #E4F2F4; }
+.estimate span { font-size: .85rem; color: var(--ink-2); }
+.estimate strong { font: 500 1.6rem var(--font-head); letter-spacing: 0.005em; }
+.quiz-back { margin-top: 14px; padding: 0; border: 0; background: none; color: var(--ink-2); font: inherit; font-size: .9rem; text-decoration: underline; cursor: pointer; }
+
+/* Form controls */
+.field { display: grid; gap: 6px; margin-bottom: 12px; }
+.field label { font-size: .875rem; font-weight: 500; }
+.field input, .field select {
+  min-height: 50px; padding: 0 14px; width: 100%;
+  border: 1.5px solid var(--mist); border-radius: 12px; background: #fff;
+  font: 400 1rem var(--font-body); color: var(--ink);
+}
+.field input:focus, .field select:focus { outline: none; border-color: var(--aqua); box-shadow: 0 0 0 3px rgba(21,122,138,.2); }
+.consent { display: flex; gap: 10px; align-items: flex-start; margin: 4px 0 16px; font-size: .8rem; color: var(--ink-2); }
+.consent input { margin-top: 3px; accent-color: var(--aqua); }
+.form-ok { padding: 16px; border-radius: 12px; background: #E4F2F4; font-weight: 500; }
+.form-ok[hidden] { display: none; }
+
+/* Facts strip */
+.facts { border-block: 1px solid var(--mist); background: var(--paper); }
+.facts ul { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.facts li { min-width: 0; padding: 22px 16px; border-left: 1px solid var(--mist); }
+.facts li:nth-child(odd) { border-left: 0; }
+.facts li:nth-child(n+3) { border-top: 1px solid var(--mist); }
+.facts b { display: block; font: 500 clamp(1.3rem, 5.4vw, 1.8rem) var(--font-head); letter-spacing: 0.005em; overflow-wrap: anywhere; }
+.facts span { display: block; font-size: .9rem; color: var(--ink-2); overflow-wrap: anywhere; }
+@media (min-width: 800px) {
+  .facts ul { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .facts li:nth-child(n) { border-top: 0; border-left: 1px solid var(--mist); padding-inline: 28px; }
+  .facts li:first-child { border-left: 0; padding-left: 0; }
+}
+
+/* Services */
+.services { display: grid; gap: 16px; }
+@media (min-width: 720px) { .services { grid-template-columns: repeat(3, 1fr); } }
+.service { display: flex; flex-direction: column; gap: 10px; padding: 24px; border-radius: 20px; background: var(--paper); text-decoration: none; transition: background-color .15s ease; }
+.service:hover { background: #fff; box-shadow: inset 0 0 0 2px var(--aqua); }
+.service h3 { font-size: 1.05rem; }
+.service p { color: var(--ink-2); font-size: .95rem; }
+.service .from { margin-top: auto; padding-top: 12px; font-weight: 600; }
+.service--feature { background: var(--ink); color: #fff; }
+.service--feature p { color: #B9CCD6; }
+.service--feature:hover { background: var(--ink); box-shadow: inset 0 0 0 2px var(--coral); }
+@media (min-width: 720px) { .service--feature { grid-column: span 2; padding: 32px; } .service--feature h3 { font-size: 1.4rem; } }
+
+/* Why us */
+.why { display: grid; gap: 0; }
+@media (min-width: 720px) { .why { grid-template-columns: 1fr 1fr; column-gap: 64px; } }
+.why-item { padding: 24px 0; border-top: 1px solid rgba(15,42,58,.18); }
+.why-item h3 { font-size: 1.1rem; margin-bottom: 8px; }
+.why-item p { color: var(--ink-2); max-width: 46ch; }
+
+/* Cases */
+.cases { display: grid; gap: 32px; align-items: center; }
+@media (min-width: 900px) { .cases { grid-template-columns: 1.1fr .9fr; gap: 56px; } }
+.compare { position: relative; aspect-ratio: 1008 / 846; border-radius: 20px; overflow: hidden; --pos: 50%; background: var(--mist); }
+.compare img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.compare .after { clip-path: inset(0 0 0 var(--pos)); }
+.compare .handle { position: absolute; top: 0; bottom: 0; left: var(--pos); width: 3px; margin-left: -1.5px; background: #fff; pointer-events: none; }
+.compare .handle::after { content: ""; position: absolute; top: 50%; left: 50%; width: 40px; height: 40px; margin: -20px; border-radius: 50%; background: var(--ink); box-shadow: 0 0 0 4px #fff; }
+.compare .tag { position: absolute; bottom: 12px; padding: 4px 12px; border-radius: 999px; background: rgba(15,42,58,.85); color: #fff; font-size: .8rem; }
+.compare .tag--b { left: 12px; }
+.compare .tag--a { right: 12px; }
+.compare input { position: absolute; inset: 0; width: 100%; height: 100%; margin: 0; opacity: 0; cursor: ew-resize; }
+.compare:focus-within { outline: 3px solid var(--aqua); outline-offset: 3px; }
+.case-info h3 { font-size: 1.4rem; margin-bottom: 12px; }
+.case-info p { color: var(--ink-2); margin-bottom: 24px; max-width: 40ch; }
+.steps { display: grid; gap: 16px; margin-top: clamp(40px, 6vw, 72px); }
+@media (min-width: 720px) { .steps { grid-template-columns: repeat(3, 1fr); } }
+.steps h3 { grid-column: 1 / -1; font-size: 1.4rem; }
+.step { margin: 0; }
+.step img { width: 100%; height: auto; aspect-ratio: 1080 / 612; object-fit: cover; border-radius: 16px; background: var(--mist); }
+.step figcaption { margin-top: 10px; font-weight: 500; }
+
+/* Doctors */
+.doctors { display: grid; gap: 16px; }
+@media (min-width: 720px) { .doctors { grid-template-columns: repeat(2, 1fr); } }
+.doctor { display: flex; align-items: center; gap: 20px; padding: 24px; border-radius: 20px; background: var(--paper); }
+.doctor .mono { flex: none; display: grid; place-items: center; width: 72px; height: 72px; border-radius: 50%; background: var(--mist); color: var(--aqua); font: 500 1.5rem var(--font-head); }
+.doctor h3 { font: 600 1.05rem/1.3 var(--font-body); letter-spacing: 0; margin-bottom: 4px; }
+.doctor p { color: var(--ink-2); font-size: .95rem; }
+@media (min-width: 720px) { .services.services--two { grid-template-columns: repeat(2, 1fr); } }
+
+/* FAQ */
+.faq { max-width: 760px; }
+.faq details { border-bottom: 1px solid var(--mist); }
+.faq summary { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 20px 0; font-weight: 600; font-size: 1.05rem; cursor: pointer; list-style: none; }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: "+"; font: 400 1.6rem/1 var(--font-body); color: var(--aqua); transition: transform .2s ease; }
+.faq details[open] summary::after { transform: rotate(45deg); }
+.faq details p { padding: 0 0 20px; color: var(--ink-2); max-width: 60ch; }
+
+/* Contact */
+.contact { display: grid; gap: 40px; }
+@media (min-width: 900px) { .contact { grid-template-columns: 1fr 1fr; gap: 64px; } }
+.contact h2 { font-size: clamp(1.9rem, 3.8vw, 2.75rem); margin-bottom: 12px; }
+.contact-lead { color: var(--ink-2); margin-bottom: 24px; max-width: 44ch; }
+.contact-form { background: var(--paper); border-radius: 24px; padding: clamp(20px, 3vw, 32px); }
+.contact-list { display: grid; gap: 16px; margin: 0 0 24px; }
+.contact-list dt { font-size: .85rem; color: var(--ink-2); }
+.contact-list dd { margin: 0; font-weight: 500; }
+.map { aspect-ratio: 16/10; border-radius: 20px; }
+.contact-links { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 20px; }
+
+/* Footer */
+.site-footer { padding-block: 32px 96px; border-top: 1px solid var(--mist); font-size: .85rem; color: var(--ink-2); }
+.site-footer .wrap { display: grid; gap: 8px; }
+@media (min-width: 800px) { .site-footer { padding-bottom: 32px; } }
+
+/* Mobile action bar */
+.action-bar { position: fixed; inset: auto 0 0 0; z-index: 30; display: grid; grid-template-columns: 1fr 1fr 1.4fr; gap: 8px; padding: 10px var(--gutter) calc(10px + env(safe-area-inset-bottom)); background: rgba(243,246,247,.96); backdrop-filter: blur(8px); border-top: 1px solid var(--mist); }
+.action-bar .btn { min-height: 46px; padding-inline: 8px; font-size: .9rem; }
+@media (min-width: 800px) { .action-bar { display: none; } }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { transition: none !important; }
+}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="Dr.Jaqypbek 24/7, на главную">
+      <img src="assets/logo.png" width="40" height="40" alt="" decoding="async">
+      Dr.Jaqypbek 24/7
+    </a>
+    <nav class="nav" aria-label="Разделы">
+      <a href="#services">Услуги</a>
+      <a href="#doctors">Врачи</a>
+      <a href="#cases">Работы</a>
+      <a href="#faq">Вопросы</a>
+      <a href="#contact">Контакты</a>
+    </nav>
+    <div class="lang" role="group" aria-label="Язык">
+      <button type="button" data-lang="ru" aria-pressed="true">RU</button>
+      <button type="button" data-lang="kk" aria-pressed="false">ҚАЗ</button>
+    </div>
+    <a class="header-phone" href="tel:+77054548040">+7 705 454 80 40<small>Круглосуточно, по звонку</small></a>
+    <a class="btn btn--primary" href="#contact">Записаться</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- 1. Первый экран -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <h1>Стоматология для всей семьи в Шымкенте, в любое время</h1>
+        <p class="hero-lead">Терапия, ортодонтия, ортопедия и хирургия в одной клинике. Работаем круглосуточно по предварительному звонку.</p>
+        <div class="hero-actions">
+          <a class="btn btn--primary" href="#contact">Записаться на приём</a>
+          <a class="btn btn--ghost" href="https://wa.me/77054548040">Написать в WhatsApp</a>
+        </div>
+        <div class="hero-proof">
+          <span class="stars" aria-hidden="true"><svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.6 6 .7-4.5 4.1 1.2 6L10 15l-5.3 2.9 1.2-6L1.4 7.8l6-.7z"/></svg><svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.6 6 .7-4.5 4.1 1.2 6L10 15l-5.3 2.9 1.2-6L1.4 7.8l6-.7z"/></svg><svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.6 6 .7-4.5 4.1 1.2 6L10 15l-5.3 2.9 1.2-6L1.4 7.8l6-.7z"/></svg><svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.6 6 .7-4.5 4.1 1.2 6L10 15l-5.3 2.9 1.2-6L1.4 7.8l6-.7z"/></svg><svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.6 6 .7-4.5 4.1 1.2 6L10 15l-5.3 2.9 1.2-6L1.4 7.8l6-.7z"/></svg></span>
+          <a href="https://2gis.kz/shymkent/firm/70000001079911508"><strong>4,9</strong> в 2ГИС, 437 оценок</a>
+          <a href="https://www.instagram.com/dr_jaqypbek">@dr_jaqypbek</a>
+        </div>
+      </div>
+
+      <!-- Квиз: 3 шага, ориентировочная цена -->
+      <div class="quiz" id="quiz" aria-live="polite">
+        <div class="quiz-top">
+          <span id="quiz-count">Шаг 1 из 3</span>
+          <div class="quiz-bar" aria-hidden="true"><i class="on"></i><i></i><i></i></div>
+        </div>
+
+        <div class="quiz-step" data-step="1">
+          <h2>Что вас беспокоит?</h2>
+          <p class="quiz-note">Ответьте на 3 вопроса, и администратор подберёт время приёма.</p>
+          <div class="opts">
+            <button type="button" class="opt" data-service="Болит зуб">Болит зуб</button>
+            <button type="button" class="opt" data-service="Коронки и виниры">Нужна коронка или винир</button>
+            <button type="button" class="opt" data-service="Брекеты">Исправить прикус</button>
+            <button type="button" class="opt" data-service="Удаление зуба">Удалить зуб</button>
+            <button type="button" class="opt" data-service="Лечение кариеса">Кариес, пломба</button>
+            <button type="button" class="opt" data-service="Не знаю">Не знаю, нужен осмотр</button>
+          </div>
+        </div>
+
+        <div class="quiz-step" data-step="2" hidden>
+          <h2>Когда удобно прийти?</h2>
+          <p class="quiz-note">Подберём ближайшее свободное время.</p>
+          <div class="opts">
+            <button type="button" class="opt" data-when="Сегодня или завтра">Сегодня или завтра</button>
+            <button type="button" class="opt" data-when="На этой неделе">На этой неделе</button>
+            <button type="button" class="opt" data-when="Позже">Позже, пока присматриваюсь</button>
+          </div>
+          <button type="button" class="quiz-back" data-back>Назад</button>
+        </div>
+
+        <div class="quiz-step" data-step="3" hidden>
+          <div class="estimate">
+            <span>График работы</span>
+            <strong>Круглосуточно, по звонку</strong>
+          </div>
+          <form id="quiz-form" novalidate>
+            <div class="field">
+              <label for="q-name">Имя</label>
+              <input id="q-name" name="name" autocomplete="given-name" required>
+            </div>
+            <div class="field">
+              <label for="q-phone">Телефон</label>
+              <input id="q-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="+7 7__ ___ __ __" required>
+            </div>
+            <label class="consent"><input type="checkbox" required> Согласен на обработку персональных данных</label>
+            <button class="btn btn--primary btn--block" type="submit">Записаться на приём</button>
+          </form>
+          <p class="form-ok" id="quiz-ok" hidden>Заявка готова. Откроется WhatsApp: нажмите «Отправить», и администратор ответит вам.</p>
+          <button type="button" class="quiz-back" data-back>Назад</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. Факты -->
+  <section class="facts" aria-label="Клиника в цифрах">
+    <div class="wrap">
+      <ul>
+        <li><b>4,9</b><span>рейтинг в 2ГИС, 437 оценок</span></li>
+        <li><b>196</b><span>отзывов в 2ГИС</span></li>
+        <li><b>24/7</b><span>по предварительному звонку</span></li>
+        <li><b>Лицензия</b><span>№ 23028015</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 3. Услуги (по карточке 2ГИС, цен там нет) -->
+  <section class="section" id="services">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Услуги клиники</h2>
+        <p>Терапия, ортодонтия, ортопедия и хирургия. Стоимость назовём при записи.</p>
+      </div>
+      <div class="services services--two">
+        <a class="service" href="#contact">
+          <h3>Терапия</h3>
+          <p>Художественная реставрация, лечение пульпита, периодонтита, начального и глубокого кариеса.</p>
+          <span class="from">Узнать стоимость</span>
+        </a>
+        <a class="service" href="#contact">
+          <h3>Ортодонтия</h3>
+          <p>Брекеты.</p>
+          <span class="from">Узнать стоимость</span>
+        </a>
+        <a class="service" href="#contact">
+          <h3>Ортопедия</h3>
+          <p>Коронки, виниры, микропротезы, телескопические протезы.</p>
+          <span class="from">Узнать стоимость</span>
+        </a>
+        <a class="service" href="#contact">
+          <h3>Хирургия</h3>
+          <p>Удаление зубов мудрости, многокорневых и однокорневых зубов.</p>
+          <span class="from">Узнать стоимость</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Врачи. Добавьте фото, когда клиника их пришлёт -->
+  <section class="section section--paper" id="doctors">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Врачи клиники</h2>
+      </div>
+      <div class="doctors">
+        <article class="doctor">
+          <div class="mono" aria-hidden="true">ЖА</div>
+          <div>
+            <h3>Жақыпбек Аслан Еркинович</h3>
+            <p>Главный врач, стоматолог-ортопед, терапевт, микроскопист</p>
+          </div>
+        </article>
+        <article class="doctor">
+          <div class="mono" aria-hidden="true">СЕ</div>
+          <div>
+            <h3>Серикбай Едиль Нартайович</h3>
+            <p>Врач-стоматолог-терапевт</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4b. Результаты работ: фото из Instagram клиники -->
+  <section class="section" id="cases">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Результаты работ</h2>
+        <p>Примеры работ клиники. Потяните ползунок, чтобы сравнить фото до и после.</p>
+      </div>
+      <div class="cases">
+        <div class="compare" id="compare">
+          <img src="assets/clean-before.jpg" alt="" loading="lazy" width="960" height="806">
+          <img class="after" src="assets/clean-after.jpg" alt="" loading="lazy" width="960" height="806">
+          <span class="tag tag--b">До</span>
+          <span class="tag tag--a">После</span>
+          <div class="handle" aria-hidden="true"></div>
+          <input type="range" min="5" max="95" value="50" aria-label="Сравнить фото до и после">
+        </div>
+        <div class="case-info">
+          <h3>Профессиональная чистка зубов</h3>
+          <p>Состояние зубов до и после профессиональной чистки.</p>
+          <a class="btn btn--primary" href="#contact">Записаться на приём</a>
+        </div>
+      </div>
+      <div class="steps">
+        <h3>Лечение и реставрация зуба</h3>
+        <figure class="step"><img src="assets/restore-1.jpg" alt="" loading="lazy" width="960" height="544"><figcaption>До лечения</figcaption></figure>
+        <figure class="step"><img src="assets/restore-2.jpg" alt="" loading="lazy" width="960" height="544"><figcaption>Подготовка зуба</figcaption></figure>
+        <figure class="step"><img src="assets/restore-3.jpg" alt="" loading="lazy" width="960" height="544"><figcaption>После реставрации</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Почему мы -->
+  <section class="section section--tint" id="why">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Что важно знать до визита</h2>
+      </div>
+      <div class="why">
+        <div class="why-item">
+          <h3>Для всей семьи</h3>
+          <p>Профессиональная стоматология для всей семьи в любое время.</p>
+        </div>
+        <div class="why-item">
+          <h3>Полный цикл услуг</h3>
+          <p>Терапия, ортодонтия, ортопедия и хирургия: многие задачи решаются в одной клинике.</p>
+        </div>
+        <div class="why-item">
+          <h3>В любое время</h3>
+          <p>Клиника работает круглосуточно по предварительному звонку. Позвоните или напишите в WhatsApp.</p>
+        </div>
+        <div class="why-item">
+          <h3>Лицензированная клиника</h3>
+          <p>Лицензия № 23028015 Министерства здравоохранения Республики Казахстан.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. FAQ -->
+  <section class="section" id="faq">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Частые вопросы</h2>
+      </div>
+      <div class="faq">
+        <details>
+          <summary>Как записаться на приём?</summary>
+          <p>Позвоните по номеру +7 705 454 80 40 или напишите в WhatsApp. Клиника работает круглосуточно по предварительному звонку.</p>
+        </details>
+        <details>
+          <summary>Какие услуги есть в клинике?</summary>
+          <p>Терапия (реставрация, лечение пульпита, периодонтита и кариеса), брекеты, ортопедия (коронки, виниры, протезы) и удаление зубов, в том числе зубов мудрости.</p>
+        </details>
+        <details>
+          <summary>Сколько стоит лечение?</summary>
+          <p>Стоимость зависит от услуги. Уточните цену у администратора по телефону или в WhatsApp.</p>
+        </details>
+        <details>
+          <summary>Есть ли у клиники лицензия?</summary>
+          <p>Да, лицензия № 23028015 Министерства здравоохранения Республики Казахстан.</p>
+        </details>
+        <details>
+          <summary>Где находится клиника?</summary>
+          <p>В Шымкенте, мкр. Нурсат 2, 29/4 к5, 1 этаж (Каратауский район). Маршрут можно построить в 2ГИС.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. Запись и контакты -->
+  <section class="section section--paper" id="contact">
+    <div class="wrap contact">
+      <div>
+        <h2>Запишитесь на приём</h2>
+        <p class="contact-lead">Оставьте телефон, и администратор свяжется с вами.</p>
+
+        <form class="contact-form" id="contact-form" novalidate>
+          <div class="field">
+            <label for="c-name">Имя</label>
+            <input id="c-name" name="name" autocomplete="given-name" required>
+          </div>
+          <div class="field">
+            <label for="c-phone">Телефон</label>
+            <input id="c-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="+7 7__ ___ __ __" required>
+          </div>
+          <div class="field">
+            <label for="c-service">Что беспокоит (необязательно)</label>
+            <select id="c-service" name="service">
+              <option value="Не знаю">Не знаю, нужен осмотр</option>
+              <option value="Лечение зубов">Лечение зубов</option>
+              <option value="Брекеты">Брекеты</option>
+              <option value="Коронки и виниры">Коронки и виниры</option>
+              <option value="Удаление зуба">Удаление зуба</option>
+            </select>
+          </div>
+          <label class="consent"><input type="checkbox" required> Согласен на обработку персональных данных</label>
+          <button class="btn btn--primary btn--block" type="submit">Записаться на приём</button>
+          <p class="form-ok" id="contact-ok" hidden>Заявка готова. Откроется WhatsApp: нажмите «Отправить», и администратор ответит вам.</p>
+        </form>
+      </div>
+
+      <div>
+        <dl class="contact-list">
+          <div><dt>Адрес</dt><dd>г. Шымкент, мкр. Нурсат 2, 29/4 к5, 1 этаж, Каратауский район</dd></div>
+          <div><dt>Часы работы</dt><dd>Круглосуточно по предварительному звонку</dd></div>
+          <div><dt>Телефон</dt><dd><a href="tel:+77054548040">+7 705 454 80 40</a></dd></div>
+        </dl>
+        <div class="contact-links" style="margin-bottom:0">
+          <a class="btn btn--ghost" href="https://wa.me/77054548040">WhatsApp</a>
+          <a class="btn btn--ghost" href="https://www.instagram.com/dr_jaqypbek">Instagram</a>
+          <a class="btn btn--ghost" href="https://www.tiktok.com/@dr_jaqypbek">TikTok</a>
+          <a class="btn btn--ghost" href="https://2gis.kz/shymkent/firm/70000001079911508">Маршрут и отзывы в 2ГИС</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p>Dr.Jaqypbek 24/7, г. Шымкент, мкр. Нурсат 2, 29/4 к5.</p>
+    <p>Лицензия № 23028015, выдана РГУ «Департамент Комитета медицинского и фармацевтического контроля Министерства здравоохранения Республики Казахстан по городу Шымкент».</p>
+    <p>Имеются противопоказания. Необходима консультация специалиста.</p>
+  </div>
+</footer>
+
+<!-- Нижняя панель на телефоне -->
+<nav class="action-bar" aria-label="Быстрая связь">
+  <a class="btn btn--ghost" href="tel:+77054548040">Позвонить</a>
+  <a class="btn btn--ghost" href="https://wa.me/77054548040">WhatsApp</a>
+  <a class="btn btn--primary" href="#contact">Записаться</a>
+</nav>
+
+<script>
+(function () {
+  /* ---------- Квиз ---------- */
+  var quiz = document.getElementById('quiz');
+  var steps = quiz.querySelectorAll('.quiz-step');
+  var bars = quiz.querySelectorAll('.quiz-bar i');
+  var count = document.getElementById('quiz-count');
+  var answers = {};
+  var step = 1;
+
+  /* Динамические строки квиза зависят от языка, поэтому рисуются из состояния */
+  function renderQuiz() {
+    steps.forEach(function (s) { s.hidden = Number(s.dataset.step) !== step; });
+    bars.forEach(function (b, i) { b.classList.toggle('on', i < step); });
+    count.textContent = translate('Шаг ' + step + ' из 3');
+  }
+  function show(n) { step = n; renderQuiz(); }
+
+  quiz.addEventListener('click', function (e) {
+    var opt = e.target.closest('.opt');
+    var back = e.target.closest('[data-back]');
+    if (opt && opt.dataset.service) {
+      answers.service = opt.dataset.service;
+      show(2);
+    } else if (opt && opt.dataset.when) {
+      answers.when = opt.dataset.when;
+      show(3);
+    } else if (back) {
+      show(step - 1);
+    }
+  });
+
+  /* ---------- Формы ---------- */
+  /* Заявка открывает WhatsApp клиники с готовым текстом: клиент нажимает «Отправить».
+     Чтобы слать заявки в CRM или Telegram-бота, добавьте fetch() рядом с console.log. */
+  function handleForm(form, okEl, extra) {
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var phone = form.querySelector('[type="tel"]');
+      var consent = form.querySelector('[type="checkbox"]');
+      var digits = phone.value.replace(/\D/g, '');
+      if (!form.querySelector('[name="name"]').value.trim()) { form.querySelector('[name="name"]').focus(); return; }
+      if (digits.length < 10) { phone.focus(); return; }
+      if (!consent.checked) { consent.focus(); return; }
+      var data = Object.assign({}, extra && extra(), Object.fromEntries(new FormData(form)));
+      console.log('Заявка:', data);
+      var text = 'Здравствуйте! Хочу записаться на приём.\nИмя: ' + data.name + '\nТелефон: ' + data.phone +
+        (data.service ? '\nИнтересует: ' + data.service : '') + (data.when ? '\nКогда удобно: ' + data.when : '');
+      window.open('https://wa.me/77054548040?text=' + encodeURIComponent(text), '_blank', 'noopener');
+      form.hidden = true;
+      okEl.hidden = false;
+    });
+  }
+  handleForm(document.getElementById('quiz-form'), document.getElementById('quiz-ok'), function () { return answers; });
+  handleForm(document.getElementById('contact-form'), document.getElementById('contact-ok'));
+
+  /* ---------- Ползунок до / после ---------- */
+  var compare = document.getElementById('compare');
+  var range = compare.querySelector('input');
+  function setPos() { compare.style.setProperty('--pos', range.value + '%'); }
+  range.addEventListener('input', setPos);
+  setPos();
+
+  /* ---------- Языки: русский (в разметке) и казахский (словарь ниже) ----------
+     Ключ словаря — русский текст ровно как в разметке. Если меняете русский
+     текст, поменяйте и ключ, иначе этот фрагмент останется по-русски
+     (в консоли при выборе ҚАЗ появится список непереведённых строк). */
+  var KK = {
+    'Dr.Jaqypbek 24/7': 'Dr.Jaqypbek 24/7',
+    'Dr.Jaqypbek 24/7, на главную': 'Dr.Jaqypbek 24/7, басты бетке',
+    'Разделы': 'Бөлімдер', 'Язык': 'Тіл',
+    'Услуги': 'Қызметтер', 'Врачи': 'Дәрігерлер', 'Вопросы': 'Сұрақтар', 'Контакты': 'Байланыс',
+    'Круглосуточно, по звонку': 'Тәулік бойы, қоңыраумен',
+    'Записаться': 'Жазылу',
+    'Dr.Jaqypbek 24/7 — стоматология в Шымкенте': 'Dr.Jaqypbek 24/7 — Шымкенттегі стоматология',
+    'Стоматология для всей семьи в Шымкенте: терапия, ортодонтия, ортопедия, хирургия. Круглосуточно по предварительному звонку. Рейтинг 4,9 в 2ГИС.':
+      'Шымкенттегі бүкіл отбасыға арналған стоматология: терапия, ортодонтия, ортопедия, хирургия. Алдын ала қоңырау шалу арқылы тәулік бойы. 2ГИС-те рейтингі 4,9.',
+
+    'Стоматология для всей семьи в Шымкенте, в любое время': 'Шымкенттегі бүкіл отбасыға арналған стоматология, кез келген уақытта',
+    'Терапия, ортодонтия, ортопедия и хирургия в одной клинике. Работаем круглосуточно по предварительному звонку.':
+      'Терапия, ортодонтия, ортопедия және хирургия бір клиникада. Алдын ала қоңырау шалу арқылы тәулік бойы жұмыс істейміз.',
+    'Записаться на приём': 'Қабылдауға жазылу',
+    'Написать в WhatsApp': 'WhatsApp-қа жазу',
+    'в 2ГИС, 437 оценок': '2ГИС-те, 437 баға', '@dr_jaqypbek': '@dr_jaqypbek',
+
+    'Что вас беспокоит?': 'Сізді не мазалайды?',
+    'Ответьте на 3 вопроса, и администратор подберёт время приёма.': '3 сұраққа жауап беріңіз, әкімші қабылдау уақытын таңдап береді.',
+    'Болит зуб': 'Тісім ауырады', 'Нужна коронка или винир': 'Тәж немесе винир керек', 'Исправить прикус': 'Тістемді түзету',
+    'Удалить зуб': 'Тісті жұлдыру', 'Кариес, пломба': 'Кариес, пломба', 'Не знаю, нужен осмотр': 'Білмеймін, тексеру керек',
+    'Когда удобно прийти?': 'Қашан келу ыңғайлы?',
+    'Подберём ближайшее свободное время.': 'Ең жақын бос уақытты таңдап береміз.',
+    'Сегодня или завтра': 'Бүгін немесе ертең', 'На этой неделе': 'Осы аптада', 'Позже, пока присматриваюсь': 'Кейінірек, әзірге қарап жүрмін',
+    'Назад': 'Артқа',
+    'График работы': 'Жұмыс кестесі',
+    'Имя': 'Есіміңіз', 'Телефон': 'Телефон',
+    'Согласен на обработку персональных данных': 'Жеке деректерді өңдеуге келісемін',
+    'Заявка готова. Откроется WhatsApp: нажмите «Отправить», и администратор ответит вам.':
+      'Өтінім дайын. WhatsApp ашылады: «Жіберу» түймесін басыңыз, әкімші сізге жауап береді.',
+
+    'Клиника в цифрах': 'Клиника сандармен',
+    'рейтинг в 2ГИС, 437 оценок': '2ГИС рейтингі, 437 баға', 'отзывов в 2ГИС': '2ГИС-тегі пікір',
+    'по предварительному звонку': 'алдын ала қоңырау арқылы', 'Лицензия': 'Лицензия', '№ 23028015': '№ 23028015',
+
+    'Услуги клиники': 'Клиника қызметтері',
+    'Терапия, ортодонтия, ортопедия и хирургия. Стоимость назовём при записи.': 'Терапия, ортодонтия, ортопедия және хирургия. Құнын жазылу кезінде айтамыз.',
+    'Терапия': 'Терапия',
+    'Художественная реставрация, лечение пульпита, периодонтита, начального и глубокого кариеса.':
+      'Көркемдік реставрация, пульпитті, периодонтитті, бастапқы және терең кариесті емдеу.',
+    'Ортодонтия': 'Ортодонтия', 'Брекеты.': 'Брекет.',
+    'Ортопедия': 'Ортопедия', 'Коронки, виниры, микропротезы, телескопические протезы.': 'Тәждер, винирлер, микропротездер, телескопиялық протездер.',
+    'Хирургия': 'Хирургия', 'Удаление зубов мудрости, многокорневых и однокорневых зубов.': 'Ақыл тістерін, көп тамырлы және бір тамырлы тістерді жұлу.',
+    'Узнать стоимость': 'Құнын білу',
+
+    'Работы': 'Жұмыстар',
+    'Результаты работ': 'Жұмыс нәтижелері',
+    'Примеры работ клиники. Потяните ползунок, чтобы сравнить фото до и после.': 'Клиника жұмыстарының мысалдары. Дейінгі және кейінгі суретті салыстыру үшін жүгірткіні жылжытыңыз.',
+    'До': 'Бұрын', 'После': 'Кейін',
+    'Сравнить фото до и после': 'Дейінгі және кейінгі суретті салыстыру',
+    'Профессиональная чистка зубов': 'Тістерді кәсіби тазалау',
+    'Состояние зубов до и после профессиональной чистки.': 'Тістің кәсіби тазалауға дейінгі және кейінгі жағдайы.',
+    'Лечение и реставрация зуба': 'Тісті емдеу және қалпына келтіру',
+    'До лечения': 'Емдеуге дейін', 'Подготовка зуба': 'Тісті дайындау', 'После реставрации': 'Реставрациядан кейін',
+    'Врачи клиники': 'Клиника дәрігерлері',
+    'ЖА': 'ЖА', 'СЕ': 'СЕ',
+    'Жақыпбек Аслан Еркинович': 'Жақыпбек Аслан Еркинович', 'Серикбай Едиль Нартайович': 'Серикбай Едиль Нартайович',
+    'Главный врач, стоматолог-ортопед, терапевт, микроскопист': 'Бас дәрігер, стоматолог-ортопед, терапевт, микроскопист',
+    'Врач-стоматолог-терапевт': 'Дәрігер-стоматолог-терапевт',
+
+    'Что важно знать до визита': 'Келер алдында білуге тиіс маңызды нәрселер',
+    'Для всей семьи': 'Бүкіл отбасыға',
+    'Профессиональная стоматология для всей семьи в любое время.': 'Бүкіл отбасыға арналған кәсіби стоматология, кез келген уақытта.',
+    'Полный цикл услуг': 'Қызметтердің толық циклі',
+    'Терапия, ортодонтия, ортопедия и хирургия: многие задачи решаются в одной клинике.': 'Терапия, ортодонтия, ортопедия және хирургия: көп мәселе бір клиникада шешіледі.',
+    'В любое время': 'Кез келген уақытта',
+    'Клиника работает круглосуточно по предварительному звонку. Позвоните или напишите в WhatsApp.':
+      'Клиника алдын ала қоңырау шалу арқылы тәулік бойы жұмыс істейді. Қоңырау шалыңыз немесе WhatsApp-қа жазыңыз.',
+    'Лицензированная клиника': 'Лицензиясы бар клиника',
+    'Лицензия № 23028015 Министерства здравоохранения Республики Казахстан.': 'Қазақстан Республикасы Денсаулық сақтау министрлігінің № 23028015 лицензиясы.',
+
+    'Частые вопросы': 'Жиі қойылатын сұрақтар',
+    'Как записаться на приём?': 'Қабылдауға қалай жазылуға болады?',
+    'Позвоните по номеру +7 705 454 80 40 или напишите в WhatsApp. Клиника работает круглосуточно по предварительному звонку.':
+      '+7 705 454 80 40 нөміріне қоңырау шалыңыз немесе WhatsApp-қа жазыңыз. Клиника алдын ала қоңырау шалу арқылы тәулік бойы жұмыс істейді.',
+    'Какие услуги есть в клинике?': 'Клиникада қандай қызметтер бар?',
+    'Терапия (реставрация, лечение пульпита, периодонтита и кариеса), брекеты, ортопедия (коронки, виниры, протезы) и удаление зубов, в том числе зубов мудрости.':
+      'Терапия (реставрация, пульпитті, периодонтитті және кариесті емдеу), брекет, ортопедия (тәждер, винирлер, протездер) және тістерді, соның ішінде ақыл тістерін жұлу.',
+    'Сколько стоит лечение?': 'Емдеу қанша тұрады?',
+    'Стоимость зависит от услуги. Уточните цену у администратора по телефону или в WhatsApp.':
+      'Құны қызметке байланысты. Бағасын әкімшіден телефон арқылы немесе WhatsApp-та нақтылаңыз.',
+    'Есть ли у клиники лицензия?': 'Клиниканың лицензиясы бар ма?',
+    'Да, лицензия № 23028015 Министерства здравоохранения Республики Казахстан.':
+      'Иә, Қазақстан Республикасы Денсаулық сақтау министрлігінің № 23028015 лицензиясы бар.',
+    'Где находится клиника?': 'Клиника қайда орналасқан?',
+    'В Шымкенте, мкр. Нурсат 2, 29/4 к5, 1 этаж (Каратауский район). Маршрут можно построить в 2ГИС.':
+      'Шымкентте, Нұрсәт 2 ш/а, 29/4 к5, 1-қабат (Қаратау ауданы). Бағытты 2ГИС-те салуға болады.',
+
+    'Запишитесь на приём': 'Қабылдауға жазылыңыз',
+    'Оставьте телефон, и администратор свяжется с вами.': 'Телефон нөміріңізді қалдырыңыз, әкімші сізбен байланысады.',
+    'Что беспокоит (необязательно)': 'Сізді не мазалайды (міндетті емес)',
+    'Лечение зубов': 'Тістерді емдеу', 'Брекеты': 'Брекет', 'Коронки и виниры': 'Тәждер және винирлер', 'Удаление зуба': 'Тісті жұлу',
+    'Адрес': 'Мекенжайы', 'г. Шымкент, мкр. Нурсат 2, 29/4 к5, 1 этаж, Каратауский район': 'Шымкент қ., Нұрсәт 2 ш/а, 29/4 к5, 1-қабат, Қаратау ауданы',
+    'Часы работы': 'Жұмыс уақыты', 'Круглосуточно по предварительному звонку': 'Алдын ала қоңырау шалу арқылы тәулік бойы',
+    'Маршрут и отзывы в 2ГИС': '2ГИС-те бағыт және пікірлер',
+
+    'Dr.Jaqypbek 24/7, г. Шымкент, мкр. Нурсат 2, 29/4 к5.': 'Dr.Jaqypbek 24/7, Шымкент қ., Нұрсәт 2 ш/а, 29/4 к5.',
+    'Лицензия № 23028015, выдана РГУ «Департамент Комитета медицинского и фармацевтического контроля Министерства здравоохранения Республики Казахстан по городу Шымкент».':
+      'Лицензия № 23028015, Қазақстан Республикасы Денсаулық сақтау министрлігінің Медициналық және фармацевтикалық бақылау комитетінің Шымкент қаласы бойынша департаменті берген.',
+    'Имеются противопоказания. Необходима консультация специалиста.': 'Қарсы көрсетімдер бар. Маманның кеңесі қажет.',
+    'Быстрая связь': 'Жылдам байланыс', 'Позвонить': 'Қоңырау', 'ҚАЗ': 'ҚАЗ'
+  };
+  [1, 2, 3].forEach(function (n) { KK['Шаг ' + n + ' из 3'] = n + '-қадам, барлығы 3'; });
+
+  var lang = 'ru';
+  function norm(s) { return s.replace(/\s+/g, ' ').trim(); }
+  function translate(ru) {
+    if (lang !== 'kk') return ru;
+    var key = norm(ru);
+    if (KK[key] !== undefined) return KK[key];
+    var m = key.match(/^от (.+) ₸$/);            // «от 8 000 ₸» → «8 000 ₸-ден бастап»
+    return m ? m[1] + ' ₸-ден бастап' : ru;
+  }
+
+  /* Собираем все переводимые узлы один раз и запоминаем русский оригинал */
+  var SKIP = { SCRIPT: 1, STYLE: 1 };
+  var DYNAMIC = { 'quiz-count': 1 };   // их рисует renderQuiz
+  var textNodes = [], attrNodes = [];
+  var walker = document.createTreeWalker(document.documentElement, NodeFilter.SHOW_TEXT);
+  for (var node; (node = walker.nextNode());) {
+    var parent = node.parentElement;
+    if (!parent || SKIP[parent.tagName] || DYNAMIC[parent.id] || !norm(node.nodeValue)) continue;
+    textNodes.push({ node: node, ru: node.nodeValue });
+  }
+  document.querySelectorAll('[aria-label],[placeholder],meta[name="description"]').forEach(function (el) {
+    ['aria-label', 'placeholder', 'content'].forEach(function (attr) {
+      if (el.hasAttribute(attr) && (attr !== 'content' || el.name === 'description')) {
+        attrNodes.push({ el: el, attr: attr, ru: el.getAttribute(attr) });
+      }
+    });
+  });
+
+  function setLang(next) {
+    lang = next;
+    var missing = [];
+    textNodes.forEach(function (t) {
+      var out = translate(t.ru);
+      if (lang === 'kk' && out === t.ru && KK[norm(t.ru)] === undefined && !/^[\d\s+\-–:.,₸%/A-Za-z]+$/.test(norm(t.ru))) missing.push(norm(t.ru));
+      t.node.nodeValue = out === t.ru ? t.ru : t.ru.match(/^\s*/)[0] + out + t.ru.match(/\s*$/)[0];
+    });
+    attrNodes.forEach(function (a) { a.el.setAttribute(a.attr, translate(a.ru)); });
+    document.documentElement.lang = lang;
+    document.querySelectorAll('.lang button').forEach(function (b) {
+      b.setAttribute('aria-pressed', String(b.dataset.lang === lang));
+    });
+    renderQuiz();
+    try { localStorage.setItem('lang', lang); } catch (e) {}
+    if (missing.length) console.warn('Нет казахского перевода для:', missing);
+  }
+
+  document.querySelector('.lang').addEventListener('click', function (e) {
+    var b = e.target.closest('button[data-lang]');
+    if (b) setLang(b.dataset.lang);
+  });
+
+  var wanted = new URLSearchParams(location.search).get('lang');
+  try { wanted = wanted || localStorage.getItem('lang'); } catch (e) {}
+  setLang(wanted === 'kk' ? 'kk' : 'ru');
+})();
+</script>
+</body>
+</html>
